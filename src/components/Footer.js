@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import './Contact.css';
 
-class Contact extends Component {
+class Footer extends Component {
 
     render() {
         return(
-            <div id="Contact">
-
+            <div id="Footer">
             </div>
         );
     }
 };
 
-export default Contact;
+export default Footer;

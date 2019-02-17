@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import { BroswerRouter as Router, Route } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faUser, faPhone, faArrowCircleRight, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 //Component Imports
-import HomePage from './components/HomePage/HomePage';
-import Contact from './components/Contact/Contact';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+library.add(faEnvelope, faUser, faPhone, faArrowCircleRight, faGlobeAmericas);
+library.add(fab);
 
 class App extends Component {
   render() {
@@ -12,7 +19,10 @@ class App extends Component {
       <div className="App">
         <Router>
           <div className="App_Contents">
+            <NavBar />
             <Route exact path="/" component={HomePage} />
+            <Route exact path="/contact" component={Contact} />
+            <Footer />
           </div>
         </Router>
       </div>
