@@ -3,6 +3,7 @@ import { Jumbotron, Container, Button } from 'react-bootstrap';
 
 //Component Imports
 import Contact from './Contact';
+import AdultEntertainmentExamples from './AdultEntertainment';
 import IceCreamExamples from './IceCreamExamples';
 import GuitarExamples from './GuitarExamples';
 import MakeupExamples from './MakeupExamples';
@@ -21,6 +22,7 @@ class HomePage extends Component {
                         <Button href="#Examples">Learn More</Button>
                     </Container>
                 </Jumbotron>
+                <AdultEntertainmentExamples />
                 <IceCreamExamples />
                 <GuitarExamples />
                 <MakeupExamples />

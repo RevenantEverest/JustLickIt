@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 //Component Imports
 import Cards from './Utils/Cards';
 
-class GuitarExamples extends Component {
+class AdultEntertainmentExamples extends Component {
 
     render() {
         return(
@@ -14,19 +14,18 @@ class GuitarExamples extends Component {
                         <Col style={{ paddingLeft: '0', paddingRight: '0' }}>
                             <Cards cardInfo={{
                                 title: 'Example Ad',
-                                image: 'https://i.imgur.com/SDMBh2j.png',
+                                image: 'https://i.imgur.com/J2hiHXz.png',
                                 displayButton: 'true',
                                 buttonText: 'View'
                             }} />
                         </Col>
                         <Col>
                             <div style={{ textAlign: 'center', width: '50%', margin: 'auto', paddingTop: '5%', color: '#cccccc' }}>
-                                <h1>Guitar Lick Campaigns</h1>
+                                <h1>Adult Entertainment</h1>
                                 <br />
                                 <p>
-                                Whether it comes to teaching, listening, or writing music for guitar Just Lick It is a witty 
-                                and attention-grabbing name. A guitar enthusiast may understand this quip immediately, but a potential 
-                                customer or person interested in learning guitar may visit your domain out of curiosity alone.
+                                Adult entertainment is an industry where making a name for yourself is important. Justlickit will 
+                                immediately make sense for a site using this name, an innuendo that anyone can pick up on.
                                 </p>
                             </div>
                         </Col>
@@ -37,4 +36,4 @@ class GuitarExamples extends Component {
     }
 };
 
-export default GuitarExamples;
+export default AdultEntertainmentExamples;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import ImageModal from './ImageModal';
 
 class Cards extends Component {
 
@@ -10,9 +11,13 @@ class Cards extends Component {
             text: this.props.cardInfo.text,
             image: this.props.cardInfo.image, 
             displayButton: this.props.cardInfo.displayButton,
-            buttonText: this.props.cardInfo.buttonText
+            buttonText: this.props.cardInfo.buttonText,
+            modalShow: false
         }
+        this.closeModal = this.closeModal.bind(this);
     }
+
+    closeModal() { this.setState({ modalShow: false }) }
 
     render() {
         return(
@@ -29,7 +34,8 @@ class Cards extends Component {
                 <Card.Body>
                     <Card.Title>{this.state.title}</Card.Title>
                     <Card.Text>{this.state.text}</Card.Text>
-                    {this.state.displayButton ? <Button variant="primary">{this.state.buttonText}</Button> : ''}
+                    {this.state.displayButton ? <Button variant="primary" onClick={() => this.setState({ modalShow: true })}>{this.state.buttonText}</Button> : ''}
+                    <ImageModal show={this.state.modalShow} onHide={this.closeModal} image={this.state.image} />
                 </Card.Body>
                 </Card>
             </div>
